@@ -471,7 +471,7 @@ export const App: React.FC = () => {
             {/* FULL TIMELINE MODAL (DRAWER) */}
             {/* ===================================================================== */}
             {showTimelineModal && tripSchedule && (
-              <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+              <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-[9999] flex items-center justify-center p-4">
                 <div className="bg-white border border-[#E2E3DE] rounded-xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-xl overflow-hidden">
                   <div className="p-4 border-b border-[#E7E7E2] flex items-center justify-between bg-[#FAFAF8]">
                     <div className="flex items-center gap-2">

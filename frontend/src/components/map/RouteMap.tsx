@@ -329,11 +329,11 @@ export const RouteMap: React.FC<Props> = ({ routePlan, stops = [], summary, load
       </div>
 
       {/* Map Display Container */}
-      <div className="relative w-full h-[340px] md:h-[380px] lg:h-[400px] rounded border border-[#E7E7E2] overflow-hidden bg-[#F5F5F2]">
+      <div className="relative w-full h-[340px] md:h-[380px] lg:h-[400px] rounded border border-[#E7E7E2] overflow-hidden bg-[#F5F5F2] isolate">
         <div ref={mapContainerRef} className="w-full h-full" />
 
         {/* Floating Route Legend on Bottom Right */}
-        <div className="absolute bottom-3 right-3 z-[1000] bg-white/95 backdrop-blur-xs rounded border border-[#E2E3DE] shadow-sm px-2.5 py-2 text-[10px] text-[#202321] pointer-events-auto">
+        <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-xs rounded border border-[#E2E3DE] shadow-sm px-2.5 py-2 text-[10px] text-[#202321] pointer-events-auto">
           <div className="flex flex-col gap-1 font-medium">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#164E3D]" />
@@ -364,7 +364,7 @@ export const RouteMap: React.FC<Props> = ({ routePlan, stops = [], summary, load
 
         {/* Loading overlay */}
         {loading && (
-          <div className="absolute inset-0 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center z-[1001] gap-2">
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-xs flex flex-col items-center justify-center z-20 gap-2">
             <div className="w-5 h-5 border-2 border-[#164E3D]/30 border-t-[#164E3D] rounded-full animate-spin" />
             <p className="text-xs font-medium text-[#202321] font-mono">Routing highway polyline...</p>
           </div>
