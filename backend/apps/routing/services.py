@@ -22,7 +22,7 @@ class TripRoutingService:
         osrm_service: Optional[OSRMService] = None,
         request_delay_seconds: float = NOMINATIM_REQUEST_DELAY_SECONDS,
     ):
-        self.geocoding_service = geocoding_service or GeocodingService()
+        self.geocoding_service = geocoding_service or GeocodingService(use_fallback=True)
         self.osrm_service = osrm_service or OSRMService()
         self.request_delay_seconds = request_delay_seconds
 

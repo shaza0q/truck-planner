@@ -6,7 +6,9 @@ from django.urls import path, include
 from apps.trips.views import PlanTripView, HealthCheckView
 
 urlpatterns = [
-    # Health check
+    # Root & Health check endpoints
+    path('', HealthCheckView.as_view(), name='root-health'),
+    path('healthz', HealthCheckView.as_view(), name='k8s-health'),
     path('api/health/', HealthCheckView.as_view(), name='health-check'),
     # Phase 1 endpoint
     path('api/hos/plan/', PlanTripView.as_view(), name='hos-plan'),
